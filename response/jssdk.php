@@ -30,9 +30,10 @@ class JSSDK {
       "url"       => $url,
       "signature" => $signature,
       "rawString" => $string,
-      "access_token"=>$this->getAccessToken()
+      "access_token"=>$this->getAccessToken(),
+      "jsapi_ticket"=>$jsapiTicket
     );
-    return $signPackage; 
+    return $signPackage;
   }
 
   private function createNonceStr($length = 16) {

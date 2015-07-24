@@ -6,7 +6,7 @@
  * Time: 2:44 PM
  */
 require_once "jssdk.php";
-$jssdk = new JSSDK("wxd1c57c307f05d877", "f6473b539bf2b74d647350eb1d4fa26b");
+$jssdk = new JSSDK("wxe54a995e512e8047", "ff3145e4a90aac2c4dc0a4eadb8997b0");
 $signPackage = $jssdk->GetSignPackage();
 /*
 $appID="wxe54a995e512e8047";
@@ -22,13 +22,36 @@ if($token) {
     var_dump($result2);
 }
 */
-
+$jsapiTicket=$signPackage["jsapi_ticket"];
+$nonceStr= $signPackage["nonceStr"];
+$timestamp=$signPackage["timestamp"];
+$url=$signPackage["url"];
+$string = "jsapi_ticket=$jsapiTicket&noncestr=$nonceStr&timestamp=$timestamp&url=$url";
+$result=sha1($string);
 echo $signPackage["appId"];
+echo '</br>';
+echo $signPackage["access_token"];
 echo '</br>';
 echo $signPackage["timestamp"];
 echo '</br>';
-echo $signPackage["nonceStr"];echo '</br>';
+echo $signPackage["jsapi_ticket"];
+echo '</br>';
+echo $signPackage["nonceStr"];
+echo '</br>';
+echo $signPackage["url"];
+
+
+echo '</br>';
+echo $signPackage["jsapi_ticket"];
+echo '</br>';
+
+
+echo '</br>';echo '</br>';echo '</br>';echo '</br>';
 echo $signPackage["signature"];
+echo '</br>';
+
+
+echo $result;
 
 ?>
 

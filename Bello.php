@@ -1,6 +1,6 @@
 <?php
 require_once "response/jssdk.php";
-$jssdk = new JSSDK("wxd1c57c307f05d877", "f6473b539bf2b74d647350eb1d4fa26b");
+$jssdk = new JSSDK('wxe54a995e512e8047', 'ff3145e4a90aac2c4dc0a4eadb8997b0');
 $signPackage= $jssdk->GetSignPackage();
 ?>
 <!DOCTYPE html>
@@ -11,38 +11,27 @@ $signPackage= $jssdk->GetSignPackage();
 </head>
 <body>
 <div style="display:none"><img src="img/logo.png" alt=""/></div>
-
-<div><img src="img/logo.png" alt=""/></div>
-
-<div><img class="showImage" src="" alt=""></div>
- <p> Bello~ WeChat~!</p>
-
-<button>ClickCheck!</button>
-<button>Forward~</button>
-
-<span><input type="file"> 上传图片</span>
+<!-- <p> Bello~ WeChat~!</p>-->
 <br/>
-
-<button onclick="chooseImage()">Upload Image</button>
-
-
-<br/>
-
-
-<button onclick="get_image()">Get Image Uploaded</button>
-
-<br/>
-
 <p id="anchor"></p>
+<br/>
+<!--<button onclick="chooseImage()">选择图片</button>
+<br/>
+<button onclick="uploadImage()">上传图片</button>
+<br/>
+<button onclick="downloadImage()">下载图片</button>
+<br/>
+<button onclick="previewImage()">预览图片</button>
 
 <br/>
 
-<button onclick="preview()">Preview</button>
+<button onclick="forWardToMoment()">分享到朋友圈</button>-->
+
 </body>
 
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/wx.js"></script>
+<script src="js/Bello.js"></script>
 <script type="text/javascript">
   /*
    * 注意：
@@ -55,35 +44,55 @@ $signPackage= $jssdk->GetSignPackage();
    * 邮件主题：【微信JS-SDK反馈】具体问题
    * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
    */
-  var serverId;
+
   wx.config({
       debug: true,
       appId: '<?php echo $signPackage["appId"];?>',
       timestamp: <?php echo $signPackage["timestamp"];?>,
       nonceStr: '<?php echo $signPackage["nonceStr"];?>',
       signature: '<?php echo $signPackage["signature"];?>',
-      jsApiList: ['onMenuShareTimeline',
-          'chooseImage',
-          'uploadImage',
-          'previewImage',
-          'downloadImage'
+      jsApiList: [
+          'startRecord',
+          'stopRecord',
+          'onVoiceRecordEnd',
+          'playVoice',
+          'pauseVoice',
+          'stopVoice',
+          'onVoicePlayEnd',
+          'uploadVoice',
+          'downloadVoice'
       ]
   });
 
-  function get_image(){
-      $.post("file/save_image.php",{access_token:<?php echo $signPackage["access_token"];?>,media_id:serverId},function
-(data,status){
-          $("#anchor").append("<img src="+data['url']+"/>");
-      },"json");
-
-  }
-
-
-  function prefiew(){
-      wx.previewImage({
-          current: '', // 当前显示图片的http链接
-          urls: [] // 需要预览的图片http链接列表
-      });
+  function uploadImage(){
+      if (localIdArray.length == 0) {
+          alert('请先使用 chooseImage 接口选择图片');
+          return;
+      }
+      var i = 0, length = localIdArray.length;
+      function upload() {
+          wx.uploadImage({
+              localId: localIdArray[i],
+              success: function (res) {
+                  i++;
+                  alert('已上传：' + i + '/' + length);
+                  mediaIdArray.push(res.serverId);
+                  $.post("file/saveImage.php",{
+                      access_token:access_token,
+                      media_id:res.serverId
+                  },function(data,status){
+                      serverImageUrlArray.push(data);
+                  },'text');
+                  if (i < length) {
+                      upload();
+                  }
+              },
+              fail: function (res) {
+                  alert(eval(res));
+              }
+          });
+      }
+      upload();
   }
 
 </script>
