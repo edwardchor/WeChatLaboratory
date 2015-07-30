@@ -1,6 +1,6 @@
 <?php
 require_once "response/jssdk.php";
-$jssdk = new JSSDK('wxe54a995e512e8047', 'ff3145e4a90aac2c4dc0a4eadb8997b0');
+$jssdk = new JSSDK('wxe54a995e512e8047', 'ed7c98b723882b05cb27e49b9ca0cf91');
 $signPackage= $jssdk->GetSignPackage();
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ $signPackage= $jssdk->GetSignPackage();
 <br/>
 <p id="anchor"></p>
 <br/>
-<!--<button onclick="chooseImage()">选择图片</button>
+<button onclick="chooseImage()">选择图片</button>
 <br/>
 <button onclick="uploadImage()">上传图片</button>
 <br/>
@@ -23,9 +23,11 @@ $signPackage= $jssdk->GetSignPackage();
 <br/>
 <button onclick="previewImage()">预览图片</button>
 
+
+
 <br/>
 
-<button onclick="forWardToMoment()">分享到朋友圈</button>-->
+<button onclick="forWardToMoment()">分享到朋友圈</button>
 
 </body>
 
@@ -94,6 +96,8 @@ $signPackage= $jssdk->GetSignPackage();
       }
       upload();
   }
+
+
 
 </script>
 </html>

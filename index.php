@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<title>Demo:小黄人变声器</title>
+	<title>小黄人变声器</title>
 
 
 	<!-- CSS FILES -->
@@ -82,7 +82,7 @@
 							<div class="shadow">
 								<div class="home-owl-content col-md-offset-2 col-md-8">
 									<div class="heading">
-										<h1>C'EST</h1>
+										<h1>C'est Banana</h1>
 									</div>
 
 								</div>
@@ -94,7 +94,7 @@
 							<div class="shadow">
 								<div class="home-owl-content col-md-offset-2 col-md-8">
 									<div class="heading">
-										<h1>BANANA</h1>
+										<h1>Miam Miam</h1>
 									</div>
 									<div class="motto">
 										<span class="text">EASY CUSTOMIZE</span><span class="separator"></span>
@@ -111,6 +111,25 @@
 				</div>
 			</a>
 		</section>
+	</section>
+
+
+
+	<section id="article1" class="article1-about padb60 prehint" >
+		<div class="container">
+			<div class="row">
+
+				<article class="col-md-4 text-left intro">
+					<h3>需要先关注测试公众号噢~!</h3>
+					<p>扫码关注:</p>
+				</article>
+				<div class="col-md-4" >
+					<img id="QRCode" src="img/0.jpeg"/>
+				</div>
+
+
+			</div>
+		</div>
 	</section>
 	<!-- END OF HOME SECTION -->
 	<!-- START MAIN NAVIGATION -->
@@ -139,28 +158,7 @@
 	</section>
 	<!-- END OF MAIN NAVIGATION -->
 	<!-- START ARTICLE1 -->
-	<section id="article1" class="article1-about padb60">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4" >
-					<img id="bello" src="img/bello.jpg" />
-				</div>
 
-
-				<article class="col-md-4 text-left intro">
-					<h3>个人工作室</h3>
-					<p>这里是没牙的爱德华先森的个人demo发布场所</p>
-					<p>You are free to enjoy every nice and cute stuff~!</p>
-					<p><a href="weixin://addfriend/edchorsutopia">欢迎扫码关注我的平台:UTOPIA</a></p>
-				</article>
-				<div class="col-md-4" >
-				<img id="QRCode" src="img/qrcode_for_gh_44b3e0c6701b_258.jpg"/>
-				</div>
-
-
-				</div>
-		</div>
-	</section>
 	<!-- END OF START ARTICLE1 -->
 	<!-- START SERVICES SECTION -->
 	<section id="services" class="page-section padb60">
@@ -184,7 +182,7 @@
 							<div class="text-content-services">
 								<h4>点击录音</h4>
 								<a onclick="startRecord()"><i class="fa fa-microphone"></i></a>
-								<p>最长时间为60s,60s时系统自动停止录音</p>
+								<p>最长时间为20s,到时系统自动停止录音</p>
 							</div>
 						</div>
 					</div>
@@ -200,19 +198,19 @@
 					<div class="services-box-small col-md-6">
 						<div class="services-content">
 							<div class="text-content-services">
-								<h4>获取小黄人版的你</h4>
-								<a onclick="downloadvoice()"><i class="fa fa-star"></i></a>
+								<h4>播放小黄人版的你</h4>
+								<a id="download"><i class="fa fa-star"></i></a>
 								<p>系统处理完成的小黄人声音效果(稍等一会儿噢,给服务器一点时间:P )</p>
 							</div>
 						</div>
 					</div>
 					<div class="services-box-small col-md-6">
 						<div class="services-content">
-							<div class="text-content-services">
-								<h4>播放小黄人声效</h4>
-								<a onclick="startPlayX()"><i class="fa fa-magic"></i></a>
-								<p>系统将播放你的声音经过处理后的小黄人声音效果</p>
-							</div>
+							<!--<div class="text-content-services">
+								<h4>小黄人爱德华的声音</h4>
+								<a onclick="playMySelf()"><i class="fa fa-magic"></i></a>
+								<p>嗯,自己录了一段- -</p>
+							</div>-->
 						</div>
 					</div>
 				</div>
@@ -249,8 +247,7 @@
 									<div class="team-pack">
 										<img class="img-responsive" src="img/kevin.png" alt="" title="">
 										<h2>凯文</h2>
-										<h3>个最高 &amp; 扛把子?</h3>
-									</div>
+										<h3>个最高 &amp; 扛把子?</h3></div>
 								</div>
 								<div class="item">
 									<div class="team-pack">
@@ -276,6 +273,31 @@
 		<!-- END OF INNER SECTION -->
 	</section>
 	<!-- END OF TEAM SECTION -->
+
+
+	<section id="article1" class="article1-about padb60">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4" >
+					<img id="bello" src="img/bello.jpg" />
+				</div>
+
+
+				<article class="col-md-4 text-left intro">
+					<h3>个人工作室</h3>
+					<p>这里是没牙的爱德华先森的个人demo发布场所</p>
+					<p>You are free to enjoy every nice and cute stuff~!</p>
+					<p ><a href="weixin://addfriend/edchorsutopia">欢迎扫码关注我的平台:UTOPIA</a></p>
+					<p class="anchor" ></p>
+				</article>
+				<div class="col-md-4" >
+					<img id="QRCode" src="img/qrcode_for_gh_44b3e0c6701b_258.jpg"/>
+				</div>
+
+
+			</div>
+		</div>
+	</section>
 </section>
 <!-- END OF MASTER WRAP -->
 
@@ -315,8 +337,6 @@
 		 * 邮件主题：【微信JS-SDK反馈】具体问题
 		 * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
 		 */
-
-
 		<?php
     require_once "response/jssdk.php";
     $jssdk = new JSSDK('wxd1c57c307f05d877', 'f6473b539bf2b74d647350eb1d4fa26b');
@@ -325,13 +345,17 @@
 
   		var localvoiceIdX='';
 		var serverVoiceIdX='';
+		var localvoiceId='';
+		var serverVoiceId='';
+		var stoped;
 		wx.config({
 			debug: false,
 			appId: '<?php echo $signPackage["appId"];?>',
 			timestamp: <?php echo $signPackage["timestamp"];?>,
 			nonceStr: '<?php echo $signPackage["nonceStr"];?>',
 			signature: '<?php echo $signPackage["signature"];?>',
-			jsApiList: ['onMenuShareTimeline',
+			jsApiList: [
+				'onMenuShareTimeline',
 				'onMenuShareAppMessage',
 				'startRecord',
 				'stopRecord',
@@ -345,13 +369,12 @@
 			]
 		});
 		wx.error(function(res){
-
 			alert(res.errMsg);
 		});
 
 		wx.ready(function(){
 			wx.checkJsApi({
-				jsApiList: ['onMenuShareTimeline',
+				jsApiList: [
 					'startRecord',
 					'stopRecord',
 					'onVoiceRecordEnd',
@@ -360,11 +383,7 @@
 					'stopVoice',
 					'onVoicePlayEnd',
 					'uploadVoice',
-					'downloadVoice',
-					'chooseImage',
-					'uploadImage',
-					'previewImage',
-					'downloadImage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+					'downloadVoice'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
 				success: function(res) {
 					// 以键值对的形式返回，可用的api值true，不可用为false
 					// 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
@@ -374,13 +393,6 @@
 			wx.onVoicePlayEnd({
 				complete: function (res) {
 					/*            alert('录音（' + res.localId + '）播放结束');*/
-				}
-			});
-
-			wx.onVoiceRecordEnd({
-				complete: function (res) {
-					localvoiceId = res.localId;
-					alert('录音时间已超过一分钟,系统自动停止');
 				}
 			});
 
@@ -416,6 +428,7 @@
 		});
 
 		function stopRecord() {
+			stoped=true;
 			wx.stopRecord({
 				success: function (res) {
 					localvoiceId = res.localId;
@@ -439,34 +452,52 @@
 				success: function (res) {
 					/*alert('上传语音成功，serverId 为' + res.serverId);*/
 					serverVoiceId = res.serverId;
+				/*	$(".anchor").append("<p>"+serverVoiceId+"</p>");*/
 					$.post("file/saveVoice.php", {
-						access_token: '<?php echo $signPackage['access_token'];?>',
 						media_id: res.serverId
 					}, function (data, status) {
-						serverVoiceIdX=data['media_id'];
+						serverVoiceIdX=data["media_id"];
+					/*	alert(data["media_id"]);
+						alert(serverVoiceIdX);
+						$(".anchor").append("<p>"+serverVoiceIdX+"</p>");*/
 					},"json");
-
+				},
+				fail:function(res){
+					alert(res);
 				}
 			});
 		}
 
+
+		document.querySelector("#download").addEventListener("click",function(){
+			if(serverVoiceIdX==''){
+				alert("还未加载到本地噢!再等一会儿:P");
+			}
+			else{
+				downloadvoice();
+			}
+
+		});
+
 		function downloadvoice(){
+		/*	alert(serverVoiceIdX);*/
 			if (serverVoiceIdX == '') {
-				alert('请先使用 uploadVoice 上传声音');
+				alert('请先上传声音');
 				return;
 			}
 			wx.downloadVoice({
 				serverId: serverVoiceIdX,
 				success: function (res) {
-				/*	alert('下载语音成功，localId 为' + res.localId);*/
+				/*alert('下载语音成功，localId 为' + res.localId);*/
 					localvoiceIdX = res.localId;
+					startPlayX();
 				}
 			});
 		}
 
 		function startPlayX(){
 			if (localvoiceIdX =='') {
-				alert('请先使用 startRecord 接口录制一段声音并提交服务器处理');
+				alert('请先录制一段声音并提交服务器处理');
 				return;
 			}
 			wx.playVoice({
@@ -481,7 +512,36 @@
 					alert('用户拒绝授权录音');
 				}
 			});
+			setTimeout(function(){
+				if(!stoped) {
+					alert('20s到啦 录音停止!');
+					wx.stopRecord({
+						success: function (res) {
+							localvoiceId = res.localId;
+							uploadVoice();
+						},
+						fail: function (res) {
+							alert(res.errMsg);
+						}
+					});
+				}
+			},20000)
 		}
+
+
+		function playMySelf(){
+			wx.downloadVoice({
+				serverId: '_ojB28TIkSJxFfTrR1GgCCkZcDcsH5DrIjPvW5hY8AjC_rQaG1Ow6pw79QmsEE5S',
+				success: function (res) {
+			/*		alert('下载语音成功，localId 为' + res.localId);*/
+					wx.playVoice({
+						localId:res.localId
+					});
+				}});
+		}
+
+
+
 	</script>
 
 </div>
