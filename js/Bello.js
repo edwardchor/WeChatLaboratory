@@ -45,7 +45,7 @@ wx.ready(function(){
 
 
     wx.onMenuShareTimeline({
-             title:"小黄人变声器!化身小黄人萌爆你!", // 分享标题
+             title:"小黄人变声器!化身小黄人萌翻朋友圈~!!", // 分享标题
              desc: '喜欢小黄人,于是WeChat的第一个demo选了这个题材,赶再一天内完成略仓促,没有加降噪功能,勉强可以使用,欢迎吐槽',
             link: 'http://utopia.polarsky.cc/WeChat/index.php', // 分享链接
             imgUrl: '../img/logo_x.png', // 分享图标
@@ -60,7 +60,7 @@ wx.ready(function(){
         });
 
     wx.onMenuShareAppMessage({
-            title:"小黄人变声器!化身小黄人萌爆你!",// 分享标题
+            title:"小黄人变声器!化身小黄人萌翻朋友圈~!!",// 分享标题
             desc: '喜欢小黄人,于是WeChat的第一个demo选了这个题材,赶再一天内完成略仓促,没有加降噪功能,勉强可以使用,欢迎吐槽',
             link: 'http://utopia.polarsky.cc/WeChat/index.php', // 分享链接
             imgUrl: '../img/logo_x.png', // 分享图标

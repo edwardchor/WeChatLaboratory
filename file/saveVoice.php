@@ -20,19 +20,19 @@ $voiceName='/var/www/html/WeChat/voice/'.$time.'.amr';
 $voiceFile=fopen($voiceName,'w');
 fwrite($voiceFile,$voiceStream);
 fclose($voiceFile);
-
+/*
 $tempFile='/var/www/html/WeChat/voice/'.$time.'.wav';
-$tempFilex='/var/www/html/WeChat/voice/'.$time.'x.wav';
-$finalFilex='/var/www/html/WeChat/voice/'.$time.'x.amr';
+$tempFilex='/var/www/html/WeChat/voice/'.$time.'s.wav';
+$finalFilex='/var/www/html/WeChat/voice/'.$time.'s.amr';
 
 
-$voiceX='/var/www/html/WeChat/voice/'.$time.'x.amr';
+$voiceX='/var/www/html/WeChat/voice/'.$time.'s.amr';
+*/
 
-
-
+/*
 $transForm='ffmpeg -i '.$voiceName.' '.$tempFile;
 $process='soundstretch '.$tempFile.''.$tempFilex.' -pitch=+7.5 -tempo=+50';
-$transFormx='ffmpeg -i '.$tempFilex.' '.$finalFilex;
+$transFormx='ffmpeg -i '.$tempFilex.' '.$finalFilex;*/
 
 exec('sh /var/www/html/WeChat/voice/generate.sh '.$time.' '.$access_token);
 

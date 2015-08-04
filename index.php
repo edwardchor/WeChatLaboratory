@@ -24,9 +24,7 @@
 	<script src="bootstrap/js/html5shiv.js"></script>
 	<script src="bootstrap/js/respond.min.js"></script>
 	<![endif]-->
-	<div style="display:none"><img src="img/logo_x.png" alt=""/></div>
 </head>
-<div style="display:none"><img src="img/logo_x.png" alt=""/></div>
 
 <body>
 
@@ -396,11 +394,13 @@
 				}
 			});
 
+
+
 			wx.onMenuShareTimeline({
-				title:"小黄人变声器!", // 分享标题
-				desc: '喜欢小黄人,于是第一个demo选了这个题材,一天内完成略仓促,于是没加降噪功能,勉强可以使用,欢迎吐槽',
+				title:"小黄人变声器!化身小黄人萌翻朋友圈~!!", // 分享标题
+				desc: '喜欢小黄人,于是WeChat的第一个demo选了这个题材,赶再一天内完成略仓促,没有加降噪功能,勉强可以使用,欢迎吐槽',
 				link: 'http://utopia.polarsky.cc/WeChat/index.php', // 分享链接
-				imgUrl: 'http://utopia.polarsky.cc/WeChat/img/logo_x.png', // 分享图标
+				imgUrl: 'http://utopia.polarsky.cc/WeChat/logo_x.png', // 分享图标
 				success: function () {
 					alert("分享成功!");
 					// 用户确认分享后执行的回调函数
@@ -412,10 +412,10 @@
 			});
 
 			wx.onMenuShareAppMessage({
-				title:"小黄人变声器!",// 分享标题
-				desc: '喜欢小黄人,于是第一个demo选了这个题材,一天内完成略仓促,于是没有加降噪功能,勉强可以使用,欢迎吐槽',
+				title:"小黄人变声器!化身小黄人萌翻朋友圈~!!",// 分享标题
+				desc: '喜欢小黄人,于是WeChat的第一个demo选了这个题材,赶再一天内完成略仓促,没有加降噪功能,勉强可以使用,欢迎吐槽',
 				link: 'http://utopia.polarsky.cc/WeChat/index.php', // 分享链接
-				imgUrl: 'http://utopia.polarsky.cc/WeChat/img/logo_x.png', // 分享图标
+				imgUrl: 'http://utopia.polarsky.cc/WeChat/logo_x.png', // 分享图标
 				success: function () {
 					alert("分享成功!");
 					// 用户确认分享后执行的回调函数
@@ -425,6 +425,7 @@
 					// 用户取消分享后执行的回调函数
 				}
 			});
+
 		});
 
 		function stopRecord() {
